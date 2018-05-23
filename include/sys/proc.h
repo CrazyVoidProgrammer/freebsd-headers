@@ -321,7 +321,7 @@ struct thread {
 
 	char            td_unk540[0x20];
 
-	char td_unk560[0x10];
+//	char td_unk560[0x10];  4.55 patch
 };
 
 struct mtx *thread_lock_block(struct thread *);
@@ -615,8 +615,8 @@ struct proc {
 
 								/* PS4 specific data */
 	char            unkA08[0x98];
-	char            unkAA0[0x18];
-	char            unkAB8[0x20];
+	char            unkAA0[0x10]; // 4.55 size change patch
+//	char            unkAB8[0x20]; 4.55 support patch
 	/* PS4 specific data */
 };
 
